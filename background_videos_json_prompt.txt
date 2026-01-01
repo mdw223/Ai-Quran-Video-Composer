@@ -1,0 +1,40 @@
+make json object background_videos with 3 variables: file_path, start, end like 
+
+```python
+background_videos.append({
+            "file_path": video_path,
+            "start": start_time,
+            "end": end_time
+        })
+```
+
+Given the following each entry in the following data, get the start time , end time, and file path and build the json, Downloaded video for 'sunrise time lapse' (0.00s - 2.72s): temp/video\pexels_video_34432841.mp4
+Downloaded video for 'clouds moving' (2.72s - 3.72s): temp/video\pexels_video_8366006.mp4
+Downloaded video for 'gentle river flow' (3.72s - 5.04s): temp/video\pexels_video_27353850.mp4
+Downloaded video for 'heart shaped stone' (5.04s - 6.24s): temp/video\pexels_video_6761647.mp4
+Downloaded video for 'storm clouds gathering' (6.24s - 8.92s): temp/video\pexels_video_12721327.mp4
+Downloaded video for 'protective shield animation' (8.92s - 12.04s): temp/video\pexels_video_6282324.mp4
+Downloaded video for 'light rays breaking through clouds' (12.04s - 16.24s): temp/video\pexels_video_17662000.mp4
+Downloaded video for 'glowing orbs representing angels' (16.24s - 20.76s): temp/video\pexels_video_35061823.mp4
+Downloaded video for 'strong stone wall' (20.76s - 23.68s): temp/video\pexels_video_9245557.mp4
+Downloaded video for 'sunset over mountains' (23.68s - 27.86s): temp/video\pexels_video_29150766.mp4
+Downloaded video for 'new blooming flower' (27.86s - 36.94s): temp/video\pexels_video_34697072.mp4
+Downloaded video for 'peaceful garden' (36.94s - 42.30s): temp/video\pexels_video_35450461.mp4
+Downloaded video for 'open sky with sunlight' (42.30s - 47.82s): temp/video\pexels_video_29969740.mp4
+Downloaded video for 'mosque worship islam' (47.82s - 49.14s): temp/video\pexels_video_35461323.mp4
+Downloaded video for 'fasting dates islam' (49.14s - 54.70s): temp/video\pexels_video_8488732.mp4
+Downloaded video for 'ocean waves' (54.70s - 59.50s): temp/video\pexels_video_8526532.mp4
+Downloaded video for 'believers praying islam' (59.50s - 66.43s): temp/video\pexels_video_9116969.mp4
+Downloaded video for 'fire and stones' (66.43s - 75.43s): temp/video\pexels_video_6003203.mp4
+Downloaded video for 'angel wings animation' (75.43s - 80.87s): temp/video\pexels_video_34730076.mp4
+Downloaded video for 'stormy skies' (80.87s - 86.55s): temp/video\pexels_video_4936489.mp4
+Downloaded video for 'light from sky' (86.80s - 96.43s): temp/video\pexels_video_5827629.mp4
+Downloaded video for 'dark clouds parting' (96.43s - 101.33s): temp/video\pexels_video_35301017.mp4
+Downloaded video for 'scales of justice' (101.33s - 109.78s): temp/video\pexels_video_8061747.mp4
+Downloaded video for 'green field sunrise' (109.78s - 116.50s): temp/video\pexels_video_24796936.mp4
+Downloaded video for 'gentle rain cleansing earth' (116.50s - 123.94s): temp/video\pexels_video_6625559.mp4
+Downloaded video for 'lush garden with flowing rivers' (123.94s - 134.62s): temp/video\pexels_video_34943250.mp4
+Downloaded video for 'bright day and blue sky' (134.62s - 141.10s): temp/video\pexels_video_8928576.mp4
+Downloaded video for 'radiant light shining' (141.10s - 149.58s): temp/video\pexels_video_15886609.mp4
+Downloaded video for 'hands raised in prayer islam' (149.58s - 158.10s): temp/video\pexels_video_7125979.mp4
+Downloaded video for 'night sky full of stars' (158.10s - 166.25s): temp/video\pexels_video_6877264.mp4

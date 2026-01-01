@@ -11,4 +11,5 @@ class Reciter(Enum):
     """
     MAHMOUD_KHALIL_AL_HUSARY = 'data/audio/ayah-recitation-mahmoud-khalil-al-husary-murattal-hafs-957_updated.json'
     MUHAMMAD_AL_MINSHAWI = 'data/audio/ayah-recitation-muhammad-siddiq-al-minshawi-murattal-hafs-959_updated.json'
+    ABU_BAKR_AL_SHATRI = 'data/audio/ayah-recitation-abu-bakr-al-shatri-murattal-hafs-952_updated.json'
     

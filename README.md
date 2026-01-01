@@ -155,7 +155,7 @@ Currently supported reciters:
 - `Reciter.MAHMOUD_KHALIL_AL_HUSARY`
 - `Reciter.MUHAMMAD_AL_MINSHAWI`
 
-_More reciters can be added by downloading their metadata files from [Tarteel.ai resources](https://qul.tarteel.ai/resources/recitation). Make sure to select files with the "with segmentation" tag for proper word-level timing data._
+_More reciters can be added by downloading their metadata files from [Tarteel.ai resources](https://qul.tarteel.ai/resources/recitation). Make sure to select files with the "with segmentation" tag and a category of "Ayah by Ayah" for proper word-level timing data._
 
 ## 🏗️ Project Structure
 

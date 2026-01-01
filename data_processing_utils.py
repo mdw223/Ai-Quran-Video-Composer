@@ -34,9 +34,10 @@ def update_audio_durations(input_file_path, output_dir=None, max_workers=5):
     # Thread-safe lock for updating data
     data_lock = threading.Lock()
     
-    def process_audio_entry(key, entry):
+    def process_audio_entry(key, entry, duration_specification):
         """Process a single audio entry to get its duration."""
-        if entry["duration"] is None and "audio_url" in entry:
+                
+        if entry[duration_specification] is None and "audio_url" in entry:
             audio_url = entry["audio_url"]
             try:
                 # Create a temporary file to download the audio
@@ -57,7 +58,7 @@ def update_audio_durations(input_file_path, output_dir=None, max_workers=5):
                 
                 # Thread-safe update of the JSON data
                 with data_lock:
-                    entry["duration"] = duration * 1000
+                    entry[duration_specification] = duration * 1000
                 
                 # Clean up
                 os.unlink(temp_path)
@@ -69,9 +70,18 @@ def update_audio_durations(input_file_path, output_dir=None, max_workers=5):
                 return key, False
         return key, None
     
-    # Get entries that need processing
-    entries_to_process = [(key, entry) for key, entry in data.items() 
-                         if entry["duration"] is None and "audio_url" in entry]
+    duration_specification = 'duration'
+    entries_to_process = []
+    try:
+        # Get entries that need processing
+        entries_to_process = [(key, entry) for key, entry in data.items() 
+                            if entry[duration_specification] is None and "audio_url" in entry]
+    except KeyError:
+        print(f"Key '{duration_specification}' not found, trying 'duration_ms' instead.")
+        duration_specification = 'duration_ms'
+        entries_to_process = [(key, entry) for key, entry in data.items() 
+                            if entry[duration_specification] is None and "audio_url" in entry]
+
     
     if not entries_to_process:
         print("No entries need duration updates")
@@ -83,7 +93,7 @@ def update_audio_durations(input_file_path, output_dir=None, max_workers=5):
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Submit all tasks
         future_to_key = {
-            executor.submit(process_audio_entry, key, entry): key 
+            executor.submit(process_audio_entry, key, entry, duration_specification): key 
             for key, entry in entries_to_process
         }
         
